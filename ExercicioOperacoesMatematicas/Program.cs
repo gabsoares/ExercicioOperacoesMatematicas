@@ -7,7 +7,7 @@ Console.WriteLine("Digite o segundo numero: ");
 num2 = double.Parse(Console.ReadLine());
 
 
-while (escolha == 0)
+while (escolha <= 0 || escolha > 4)
 {
     Console.WriteLine("Digite o numero: 1-Adição| 2-Subtração| 3- Multiplicacao| 4- Divisao");
     escolha = int.Parse(Console.ReadLine());
@@ -26,7 +26,7 @@ while (escolha == 0)
         multiplicacao = num1 * num2;
         Console.WriteLine($"Multiplicacao: {multiplicacao}");
     }
-    else
+    else if (escolha == 4)
     {
         if (num2 == 0)
         {
