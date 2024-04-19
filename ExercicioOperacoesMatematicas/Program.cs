@@ -1,45 +1,56 @@
-﻿double num1, num2, soma, multiplicacao, divisao, subtracao;
+﻿double num1 = 0, num2 = 0, num3 = 0, num4 = 0, resultado;
 int escolha = 0;
 
-Console.WriteLine("Digite o primeiro numero: ");
+Console.Write("Digite o primeiro numero: ");
 num1 = double.Parse(Console.ReadLine());
-Console.WriteLine("Digite o segundo numero: ");
-num2 = double.Parse(Console.ReadLine());
 
+while(num2 == 0)
+{
+    Console.Write("Digite o segundo numero: ");
+    num2 = double.Parse(Console.ReadLine());
+}
+
+do
+{
+    Console.Write("Digite o terceiro numero: ");
+    num3 = double.Parse(Console.ReadLine());
+} while (num3 == 0);
+
+for (num4 = 0; num4 == 0;)
+{
+    Console.Write("Digite o quarto numero: ");
+    num4 = double.Parse(Console.ReadLine());
+}
 
 while (escolha <= 0 || escolha > 4)
 {
-    Console.WriteLine("Digite o numero: 1-Adição| 2-Subtração| 3- Multiplicacao| 4- Divisao");
+    Console.Write("Digite o numero: 1-Adição| 2-Subtração| 3- Multiplicacao| 4- Divisao: ");
     escolha = int.Parse(Console.ReadLine());
     if (escolha == 1)
     {
-        soma = num1 + num2;
-        Console.WriteLine($"Soma: {soma}");
+        resultado = num1 + num2 + num3 + num4;
+        Console.WriteLine($"Soma: {resultado}");
     }
     else if (escolha == 2)
     {
-        subtracao = num1 - num2;
-        Console.WriteLine($"Subtracao: {subtracao}");
+        resultado = num1 - num2 - num3 - num4;
+        Console.WriteLine($"Subtracao: {resultado}");
     }
     else if (escolha == 3)
     {
-        multiplicacao = num1 * num2;
-        Console.WriteLine($"Multiplicacao: {multiplicacao}");
+        resultado = num1 * num2 * num3 * num4;
+        Console.WriteLine($"Multiplicacao: {resultado}");
     }
     else if (escolha == 4)
     {
-        if (num2 == 0)
-        {
-            Console.WriteLine("Nao divisivel por 0");
-        }
-        else if (num2 < 0)
+        if (num2 < 0 || num3 < 0 || num4 < 0)
         {
             Console.WriteLine("Nao divisivel por numero negativo");
         }
         else
         {
-            divisao = num1 / num2;
-            Console.WriteLine($"Divisao: {divisao}");
+            resultado = num1 / num2 / num3 / num4;
+            Console.WriteLine($"Divisao: {resultado}");
         }
     }
 }
